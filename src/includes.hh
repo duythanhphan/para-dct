@@ -10,5 +10,6 @@
 # include <tbb/parallel_for.h>
 # include <tbb/blocked_range.h>
 # include <iostream>
+# include "tools.hh"
 
 #endif /* !INCLUDES_HH_ */

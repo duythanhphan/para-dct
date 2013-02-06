@@ -1,19 +1,19 @@
-#ifndef IDCT_HH_
-# define IDCT_HH_
+#ifndef DCT_HH_
+# define DCT_HH_
 
 # include "includes.hh"
 # include "constants.hh"
 # include "data.hh"
 
-class Idct
+class Dct
 {
   protected:
     Data *data_;
 
   public:
-    Idct (Data *data_);
+    Dct (Data *data_);
     void operator () (const tbb::blocked_range<unsigned>& r) const;
 };
 
 
-#endif /* !IDCT_HH_ */
+#endif /* IDCT_HH_ */

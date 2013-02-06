@@ -12,10 +12,11 @@
 # define COEF 0.024639942
 
 
-typedef float**** t_float4d;
-typedef float*** t_float3d;
-typedef float** t_float2d;
-typedef float* t_float1d;
+typedef float t_real;
+typedef t_real**** t_arr4d;
+typedef t_real*** t_arr3d;
+typedef t_real** t_arr2d;
+typedef t_real* t_arr1d;
 
 
 #endif /* CONSTANTS_HH_ */
