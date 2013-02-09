@@ -67,6 +67,30 @@ void Data::compute_coef ()
   }
 }
 
+void Data::points2pixels (PixelToaster::vector<PixelToaster::Pixel>& res)
+{
+  t_real *p_ptr = points_;
+  for (unsigned i = 0; i < size_; ++i, ++p_ptr)
+  {
+    PixelToaster::Pixel & p = res[i];
+    p.r = *(p_ptr);
+    p.b = *(p_ptr);
+    p.g = *(p_ptr);
+  }
+}
+
+void Data::points2pixels (PixelToaster::vector<PixelToaster::Pixel>& res)
+{
+  t_real *f_ptr = frequencies_;
+  for (unsigned i = 0; i < fsize_; ++i, ++f_ptr)
+  {
+    PixelToaster::Pixel & p = res[i];
+    p.r = *(f_ptr);
+    p.b = *(f_ptr);
+    p.g = *(f_ptr);
+  }
+}
+
 void Data::random_freq ()
 {
   t_real* ptr = freqs;
@@ -110,7 +134,7 @@ void Data::ranged_idct (size_t begin, size_t end)
   t_real awah2 = aw_2 * ah_1;
   t_real awah3 = aw_2 * ah_2;
 
-  for (size_t i = 0; i < end; ++i, ++ptr_p, ++ptr_c)
+  for (size_t i = begin; i < end; ++i, ++ptr_p, ++ptr_c)
   {
     const t_real* ptr_f = frequencies_;
     t_arr1d ptr_cuv = *ptr_cxy;

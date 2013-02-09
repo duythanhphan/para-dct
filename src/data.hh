@@ -14,7 +14,9 @@ class Data
     const t_real *freq_get ();
     const t_real *points_get ();
     void ranged_dct (size_t begin, size_t end);
-    void ranged_idct (size_t begin, size_t end)
+    void ranged_idct (size_t begin, size_t end);
+    void points2pixels (PixelToaster::vector<PixelToaster::Pixel>& res);
+    void freq2pixels (PixelToaster::vector<PixelToaster::Pixel>& res);
 
   private:
     void compute_coef ();

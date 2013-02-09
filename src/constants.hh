@@ -7,6 +7,7 @@
 # define FREQ_H 64
 # define HB(v) (v < 255 ? v : 255)
 # define LB(v) (v < 0 ? 0 : v)
+# define NB_WORKERS 64
 # define INV_255 0.00392157
 # define PI2 6.28318530
 # define COEF 0.024639942
